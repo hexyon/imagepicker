@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Picker</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <input type="file" id="uploadButton" multiple onchange="uploadFiles()" style="display: none;">
+    <button id="upload-button" onclick="document.getElementById('uploadButton').click()">Upload Images</button>
+    <p id="count">0 images uploaded</p>
+
+    <input type="text" id="fileNames" placeholder="File names separated by commas">
+    <button id="okay-button" onclick="displayImages()">OK</button>
+    <p id="selectedCount">0 images selected</p>
+
+    <button id="downloadButton" onclick="downloadImages()">Download Images</button>
+    <button id="downloadUnselectedButton" onclick="downloadUnselectedImages()">Download Unselected Images</button>
+
+    <script src="ImagePickerScript.js"></script>
+</body>
+</html>
